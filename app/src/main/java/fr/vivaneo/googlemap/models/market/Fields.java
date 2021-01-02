@@ -1,19 +1,19 @@
-package fr.vivaneo.googlemap.models.velib;
+package fr.vivaneo.googlemap.models.market;
 
 import java.io.Serializable;
 
 public class Fields implements Serializable {
 
-    private String nom_site;
+    private String nom_court;
     private double[] geo_point_2d;
 
 
     public String getName() {
-        return nom_site;
+        return nom_court;
     }
 
     public void setName(String name) {
-        this.nom_site = name;
+        this.nom_court = name;
     }
 
 

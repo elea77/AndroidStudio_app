@@ -25,9 +25,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import fr.vivaneo.googlemap.models.velib.ApiWiFi;
-import fr.vivaneo.googlemap.models.velib.Fields;
-import fr.vivaneo.googlemap.models.velib.Records;
+import fr.vivaneo.googlemap.models.market.ApiMarket;
+import fr.vivaneo.googlemap.models.market.Fields;
+import fr.vivaneo.googlemap.models.market.Records;
 import fr.vivaneo.googlemap.utils.Constant;
 import fr.vivaneo.googlemap.utils.FastDialog;
 import fr.vivaneo.googlemap.utils.Network;
@@ -106,7 +106,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     public void onResponse(String json) {
                         Log.e("volley", json);
 
-                        ApiWiFi api = new Gson().fromJson(json, ApiWiFi.class);
+                        ApiMarket api = new Gson().fromJson(json, ApiMarket.class);
 
                         records = api.getRecords();
 
@@ -125,18 +125,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                                         )
                                                 )
                                                 .title(fields.getName())
-                                                //.snippet(fields.getNumdocksavailable() + "/" + fields.getCapacity())
                                 );
+                                /* mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+                                                                  @Override
+                                                                  public boolean onMarkerClick(Marker m) {
+                                                                      AlertDialog.Builder adb = new AlertDialog.Builder(MapsActivity.this);
+                                                                      adb.setTitle("Nature de la perte : " );
+                                                                      adb.setMessage( " - Type d'objet : ");
+                                                                      //on indique que l'on veut le bouton ok à notre boite de dialogue
+                                                                      adb.setPositiveButton("Ok", null);
+                                                                      //on affiche la boite de dialogue
+                                                                      adb.show();
+                                                                      return false;
+                                                                  }
+                                                              }); */
                                 markers.put(marker.getId(), fields); // pour associer l'identifiant d'un Market aux données (de l'objet Fields)
 
 
                                 if (i == 0) {
-                                    /*mMap.moveCamera(CameraUpdateFactory.newLatLng(
-                                            new LatLng(
-                                                    fields.getGeo_point_2d()[0],
-                                                    fields.getGeo_point_2d()[1]
-                                            )
-                                    )); */
                                     float zoomLevel = 11.0f; //This goes up to 21
                                     mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(
                                             fields.getGeo_point_2d()[0],
@@ -154,10 +160,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 Log.e("volley", json);
             }
+
         });
 
         // Add the request to the RequestQueue.
         queue.add(stringRequest);
     }
+
+
 
 }

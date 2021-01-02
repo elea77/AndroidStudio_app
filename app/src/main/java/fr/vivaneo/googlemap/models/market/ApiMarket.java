@@ -1,8 +1,8 @@
-package fr.vivaneo.googlemap.models.velib;
+package fr.vivaneo.googlemap.models.market;
 
 import java.util.List;
 
-public class ApiWiFi {
+public class ApiMarket {
     private List<Records> records;
 
     public List<Records> getRecords() {

@@ -1,4 +1,4 @@
-package fr.vivaneo.googlemap.models.velib;
+package fr.vivaneo.googlemap.models.market;
 
 public class Records {
     private Fields fields;
