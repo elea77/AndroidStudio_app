@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Google Map</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- FastDialog -->
+    <string name="ok">OK</string>
+    <string name="cancel">Annuler</string>
+    <string name="dialog_network_error">Vous devez être connecté</string>
+</resources>
