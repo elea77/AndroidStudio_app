@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Google Map</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="app_name">Markets Places</string>
+    <string name="title_activity_maps">Markets Places</string>
 
     <!-- FastDialog -->
     <string name="ok">OK</string>

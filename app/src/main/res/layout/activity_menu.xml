@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/splashscreen"
+    tools:context=".MenuActivity">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:src="@drawable/market"/>
+
+
+    <ImageButton
+        android:onClick="map"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/btnmap"/>
+
+    <ImageButton
+        android:onClick="list"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/btnliste"/>
+
+    <ImageButton
+        android:onClick="favorite"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/btnfavoris"/>
+
+
+
+</LinearLayout>

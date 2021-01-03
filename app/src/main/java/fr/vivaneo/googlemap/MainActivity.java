@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         myTimer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Intent myIntent = new Intent(MainActivity.this, MapsActivity.class);
+                Intent myIntent = new Intent(MainActivity.this, MenuActivity.class);
                 startActivity(myIntent);
                 finish();
             }
