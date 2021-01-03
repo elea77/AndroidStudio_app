@@ -5,14 +5,15 @@ import java.io.Serializable;
 public class Fields implements Serializable {
 
     private String nom_court;
+    private double[] geo_point_2d;
     private String jours_tenue;
-    private Boolean lundi;
-    private Boolean mardi;
-    private Boolean mercredi;
-    private Boolean jeudi;
-    private Boolean vendredi;
-    private Boolean samedi;
-    private Boolean dimanche;
+    private Number lundi;
+    private Number mardi;
+    private Number mercredi;
+    private Number jeudi;
+    private Number vendredi;
+    private Number samedi;
+    private Number dimanche;
     private String h_deb_sem_1;
     private String h_deb_dim;
     private String h_fin_sem_1;
@@ -20,7 +21,6 @@ public class Fields implements Serializable {
     private Integer ardt;
     private String localisation;
     private String produit;
-    private double[] geo_point_2d;
 
 
     public String getName() {
@@ -48,59 +48,59 @@ public class Fields implements Serializable {
         this.jours_tenue = jours_tenue;
     }
 
-    public Boolean getLundi() {
+    public Number getLundi() {
         return lundi;
     }
 
-    public void setLundi(Boolean lundi) {
+    public void setLundi(Number lundi) {
         this.lundi = lundi;
     }
 
-    public Boolean getMardi() {
+    public Number getMardi() {
         return mardi;
     }
 
-    public void setMardi(Boolean mardi) {
+    public void setMardi(Number mardi) {
         this.mardi = mardi;
     }
 
-    public Boolean getMercredi() {
+    public Number getMercredi() {
         return mercredi;
     }
 
-    public void setMercredi(Boolean mercredi) {
+    public void setMercredi(Number mercredi) {
         this.mercredi = mercredi;
     }
 
-    public Boolean getJeudi() {
+    public Number getJeudi() {
         return jeudi;
     }
 
-    public void setJeudi(Boolean jeudi) {
+    public void setJeudi(Number jeudi) {
         this.jeudi = jeudi;
     }
 
-    public Boolean getVendredi() {
+    public Number getVendredi() {
         return vendredi;
     }
 
-    public void setVendredi(Boolean vendredi) {
+    public void setVendredi(Number vendredi) {
         this.vendredi = vendredi;
     }
 
-    public Boolean getSamedi() {
+    public Number getSamedi() {
         return samedi;
     }
 
-    public void setSamedi(Boolean samedi) {
+    public void setSamedi(Number samedi) {
         this.samedi = samedi;
     }
 
-    public Boolean getDimanche() {
+    public Number getDimanche() {
         return dimanche;
     }
 
-    public void setDimanche(Boolean dimanche) {
+    public void setDimanche(Number dimanche) {
         this.dimanche = dimanche;
     }
 
@@ -159,4 +159,6 @@ public class Fields implements Serializable {
     public void setProduit(String produit) {
         this.produit = produit;
     }
+
+
 }
