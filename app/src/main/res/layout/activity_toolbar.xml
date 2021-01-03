@@ -6,8 +6,25 @@
     tools:context=".ToolbarActivity"
     android:id="@+id/toolbar"
     android:background="@color/green"
-    android:title="@string/app_name"
     android:titleTextColor="@color/white"
     tools:targetApi="lollipop">
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:onClick="back"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/back_arrow"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:text="@string/app_name"/>
+
 
 </Toolbar>
