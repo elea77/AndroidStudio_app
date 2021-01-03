@@ -22,6 +22,11 @@ public class Fields implements Serializable {
     private String localisation;
     private String produit;
 
+    public Fields(String nom_court, String produit) {
+        this.nom_court = nom_court;
+        this.produit = produit;
+    }
+
 
     public String getName() {
         return nom_court;

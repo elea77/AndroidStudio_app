@@ -21,6 +21,9 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void list(View view) {
+        Intent listingPage = new Intent(MenuActivity.this, ListingActivity.class);
+
+        startActivity(listingPage);
     }
 
     public void favorite(View view) {

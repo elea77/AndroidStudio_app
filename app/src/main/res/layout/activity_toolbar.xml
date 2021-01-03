@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:background="@color/green"
         android:onClick="back"
-        android:layout_marginRight="5dp"
+        android:layout_marginRight="25dp"
         android:src="@drawable/back_arrow"/>
 
 

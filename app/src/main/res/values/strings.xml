@@ -6,4 +6,6 @@
     <string name="ok">OK</string>
     <string name="cancel">Annuler</string>
     <string name="dialog_network_error">Vous devez être connecté</string>
+
+
 </resources>
