@@ -22,9 +22,22 @@ public class Fields implements Serializable {
     private String localisation;
     private String produit;
 
-    public Fields(String nom_court, String produit) {
+    public Fields(String nom_court, String produit, String localisation, Integer ardt, Number lundi, Number mardi, Number mercredi, Number jeudi, Number vendredi, Number samedi, Number dimanche, String h_deb_dim, String h_fin_dim, String h_deb_sem_1, String h_fin_sem_1) {
         this.nom_court = nom_court;
         this.produit = produit;
+        this.localisation = localisation;
+        this.ardt = ardt;
+        this.lundi = lundi;
+        this.mardi = mardi;
+        this.mercredi = mercredi;
+        this.jeudi = jeudi;
+        this.vendredi = vendredi;
+        this.samedi = samedi;
+        this.dimanche = dimanche;
+        this.h_deb_dim = h_deb_dim;
+        this.h_fin_dim = h_fin_dim;
+        this.h_deb_sem_1 = h_deb_sem_1;
+        this.h_fin_sem_1 = h_fin_sem_1;
     }
 
 

@@ -21,13 +21,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import fr.vivaneo.googlemap.models.market.ApiMarket;
+import fr.vivaneo.googlemap.models.market.Fields;
 import fr.vivaneo.googlemap.utils.Constant;
 
 public class ListingActivity extends AppActivity {
 
     private ListView listViewData;
     //gestion de la listView
-    List<String> fieldsList = new ArrayList<>();
+    List<Fields> fieldsList = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,27 +70,43 @@ public class ListingActivity extends AppActivity {
 
         for (int i = 0; i < api.getRecords().size(); i++) {
                 //Log.e("Fields", "getName" + api.getRecords().get(i).getFields().getName());
-                fieldsList.add(
-                        api.getRecords().get(i).getFields().getName()+"\n"+
-                        api.getRecords().get(i).getFields().getProduit()
-
-                );
+                fieldsList.add(new Fields(
+                        api.getRecords().get(i).getFields().getName(),
+                        api.getRecords().get(i).getFields().getProduit(),
+                        api.getRecords().get(i).getFields().getLocalisation(),
+                        api.getRecords().get(i).getFields().getArdt(),
+                        api.getRecords().get(i).getFields().getLundi(),
+                        api.getRecords().get(i).getFields().getMardi(),
+                        api.getRecords().get(i).getFields().getMercredi(),
+                        api.getRecords().get(i).getFields().getJeudi(),
+                        api.getRecords().get(i).getFields().getVendredi(),
+                        api.getRecords().get(i).getFields().getSamedi(),
+                        api.getRecords().get(i).getFields().getDimanche(),
+                        api.getRecords().get(i).getFields().getH_deb_dim(),
+                        api.getRecords().get(i).getFields().getH_fin_dim(),
+                        api.getRecords().get(i).getFields().getH_deb_sem_1(),
+                        api.getRecords().get(i).getFields().getH_fin_sem_1()
+                ));
 
         }
+        listViewData.setAdapter(
+                new FieldsAdapter(
+                        ListingActivity.this,
+                        R.layout.item_fields,
+                        fieldsList
+                )
+        );
 
-        ArrayAdapter<String> adapter;
-        adapter = new ArrayAdapter<String>(ListingActivity.this, android.R.layout.simple_list_item_1, fieldsList);
-        listViewData.setAdapter(adapter);
 
         listViewData.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 // Objet
-                String item = fieldsList.get(position);
+                Fields item = fieldsList.get(position);
 
                 // Intent
-                Intent intentDetails = new Intent(ListingActivity.this, MenuActivity.class);
+                Intent intentDetails = new Intent(ListingActivity.this, DetailsActivity.class);
 
                 //passage de l'objet
                 intentDetails.putExtra("object", item);
