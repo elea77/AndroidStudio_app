@@ -9,14 +9,14 @@
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="MC DO"
+        tools:text="Nom du marché"
         android:padding="5dp"/>
 
     <TextView
         android:id="@+id/textViewCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Fast Food"
+        tools:text="Type de produit"
         android:padding="5dp"/>
 
 

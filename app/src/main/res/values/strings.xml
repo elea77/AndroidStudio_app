@@ -6,6 +6,12 @@
     <string name="ok">OK</string>
     <string name="cancel">Annuler</string>
     <string name="dialog_network_error">Vous devez être connecté</string>
-
+    <string name="lundi"><u>Lundi :</u></string>
+    <string name="mardi"><u>Mardi :</u></string>
+    <string name="mercredi"><u>Mercredi :</u></string>
+    <string name="jeudi"><u>Jeudi :</u></string>
+    <string name="vendredi"><u>Vendredi :</u></string>
+    <string name="samedi"><u>Samedi :</u></string>
+    <string name="dimanche"><u>Dimanche :</u></string>
 
 </resources>
