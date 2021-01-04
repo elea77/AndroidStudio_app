@@ -124,7 +124,7 @@
         android:text="Horaires d'ouvertures :"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
-        android:textSize="18dp"
+        android:textSize="20dp"
         android:textColor="@color/black"/>
 
     <LinearLayout
@@ -136,7 +136,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:text="@string/lundi"
             android:textColor="@color/black"/>
 
@@ -160,7 +160,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:text="@string/mardi"
             android:textColor="@color/black"/>
 
@@ -184,7 +184,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:text="@string/mercredi"
             android:textColor="@color/black"/>
 
@@ -208,7 +208,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:text="@string/jeudi"
             android:textColor="@color/black"/>
 
@@ -232,7 +232,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:text="@string/vendredi"
             android:textColor="@color/black"/>
 
@@ -256,7 +256,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:text="@string/samedi"
             android:textColor="@color/black"/>
 
@@ -280,7 +280,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:text="@string/dimanche"
             android:textColor="@color/black"/>
 
