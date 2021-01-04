@@ -126,19 +126,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                                 )
                                                 .title(fields.getName())
                                 );
-                                /* mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-                                                                  @Override
-                                                                  public boolean onMarkerClick(Marker m) {
-                                                                      AlertDialog.Builder adb = new AlertDialog.Builder(MapsActivity.this);
-                                                                      adb.setTitle("Nature de la perte : " );
-                                                                      adb.setMessage( " - Type d'objet : ");
-                                                                      //on indique que l'on veut le bouton ok à notre boite de dialogue
-                                                                      adb.setPositiveButton("Ok", null);
-                                                                      //on affiche la boite de dialogue
-                                                                      adb.show();
-                                                                      return false;
-                                                                  }
-                                                              }); */
                                 markers.put(marker.getId(), fields); // pour associer l'identifiant d'un Market aux données (de l'objet Fields)
 
 
