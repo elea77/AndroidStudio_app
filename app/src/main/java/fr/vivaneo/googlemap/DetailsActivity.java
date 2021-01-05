@@ -1,20 +1,17 @@
 package fr.vivaneo.googlemap;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.TextView;
-
-import com.squareup.picasso.Picasso;
 
 import fr.vivaneo.googlemap.models.market.Fields;
 
 public class DetailsActivity extends AppActivity {
 
-    private Button buttonFav0;
-    private Button buttonFav1;
+    private Button buttonFav;
     private TextView textNomMarche;
     private TextView textLocalisation;
     private TextView textCategory;
@@ -34,8 +31,7 @@ public class DetailsActivity extends AppActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-        /*buttonFav0 = findViewById(R.id.buttonFav0);
-        buttonFav1 = findViewById(R.id.buttonFav1);*/
+        buttonFav = findViewById(R.id.buttonFav);
         textNomMarche = findViewById(R.id.textNomMarche);
         textLocalisation = findViewById(R.id.textLocalisation);
         textCategory = findViewById(R.id.textCategory);
@@ -53,6 +49,16 @@ public class DetailsActivity extends AppActivity {
 
             item = (Fields) getIntent().getExtras().get("object");
 
+                String FAVORITE_NAME = "MyFavorites";
+                SharedPreferences preferences=getSharedPreferences(FAVORITE_NAME,MODE_PRIVATE);
+                String valueFav=preferences.getString(item.getName(),"0");
+                SharedPreferences.Editor editor=preferences.edit();
+
+                if(valueFav == "0"){
+                    buttonFav.setBackgroundResource(R.drawable.favori_blanc);
+                }else{
+                    buttonFav.setBackgroundResource(R.drawable.favori_noir);
+                }
 
                 textNomMarche.setText(item.getName());
                 textLocalisation.setText(item.getLocalisation());
@@ -122,6 +128,25 @@ public class DetailsActivity extends AppActivity {
                     String horaires = h_deb + " - " + h_fin;
                     textHorairesDimanche.setText(horaires);
                 }
+
+                buttonFav.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if(valueFav == "0"){
+                            editor.putString(item.getName(),"1");
+                            editor.commit();
+
+                            finish();
+                            startActivity(getIntent());
+                        }else{
+                            editor.putString(item.getName(),"0");
+                            editor.commit();
+
+                            finish();
+                            startActivity(getIntent());
+                        }
+                    }
+                });
 
         }
     }

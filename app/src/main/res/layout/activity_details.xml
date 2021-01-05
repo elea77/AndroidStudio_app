@@ -14,7 +14,7 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/buttonFav0"
+            android:id="@+id/buttonFav"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_marginTop="5dp"
@@ -22,14 +22,6 @@
             android:layout_alignParentRight="true"
             android:background="@drawable/favori_blanc"/>
 
-        <Button
-            android:id="@+id/buttonFav1"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/favori_noir"/>
 
     </RelativeLayout>
 
