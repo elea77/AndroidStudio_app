@@ -2,6 +2,7 @@ package fr.vivaneo.googlemap;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -68,6 +69,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
         */
+
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                //String name = marker.getTitle();
+                Fields object = markers.get(marker.getId());
+
+                Intent popup = new Intent(MapsActivity.this, PopupActivity.class);
+
+                popup.putExtra("object", object);
+
+                startActivity(popup);
+
+                return true;
+            }
+        });
 
         mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
