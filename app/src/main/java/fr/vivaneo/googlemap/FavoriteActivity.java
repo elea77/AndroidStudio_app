@@ -130,4 +130,8 @@ public class FavoriteActivity extends AppActivity {
         });
 
     }
+
+    public void refresh(View view) {
+        startActivity(getIntent());
+    }
 }
