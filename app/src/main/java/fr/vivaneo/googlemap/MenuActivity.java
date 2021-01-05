@@ -27,5 +27,8 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void favorite(View view) {
+        Intent favoritePage = new Intent(MenuActivity.this, FavoriteActivity.class);
+
+        startActivity(favoritePage);
     }
 }

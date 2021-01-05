@@ -50,9 +50,9 @@ public class DetailsActivity extends AppActivity {
             item = (Fields) getIntent().getExtras().get("object");
 
                 String FAVORITE_NAME = "MyFavorites";
-                SharedPreferences preferences=getSharedPreferences(FAVORITE_NAME,MODE_PRIVATE);
-                String valueFav=preferences.getString(item.getName(),"0");
-                SharedPreferences.Editor editor=preferences.edit();
+                SharedPreferences preferences = getSharedPreferences(FAVORITE_NAME,MODE_PRIVATE);
+                String valueFav = preferences.getString(item.getName(),"0");
+                SharedPreferences.Editor editor = preferences.edit();
 
                 if(valueFav == "0"){
                     buttonFav.setBackgroundResource(R.drawable.favori_blanc);

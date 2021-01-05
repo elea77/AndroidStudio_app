@@ -17,7 +17,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GoogleMap">
-        <activity android:name=".PopupActivity" android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity android:name=".FavoriteActivity"></activity>
+        <activity
+            android:name=".PopupActivity"
+            android:theme="@style/Theme.AppCompat.Translucent" />
         <activity android:name=".DetailsActivity" />
         <activity android:name=".ListingActivity" />
         <activity android:name=".MenuActivity" />
@@ -33,7 +36,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".MapsActivity"/>
+        <activity android:name=".MapsActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_maps"
