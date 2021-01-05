@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -172,6 +173,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         queue.add(stringRequest);
     }
 
+    public void back(View view) {
+        Intent menuPage = new Intent(MapsActivity.this, MenuActivity.class);
 
+        startActivity(menuPage);
+    }
 
 }
